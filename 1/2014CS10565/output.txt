@@ -1,0 +1,3 @@
+Threads: 8
+Time: 0.067525
+Md5-sum: 64dd384e5e537ffd2fbfc7dcbecb2792

@@ -1,0 +1,27 @@
+1)Data Structure
+a)	A struct having two longs 
+		int value 
+		int fromleft
+	Initially the values from file are stored in value attribute
+	Finally we get ans in fromleft attribute
+
+2) 
+Optimum threads 4
+No. of cores 4
+
+3) 
+I am creating an array of the struct mentioned in (1)
+I am passing a different struct element to threads with following data
+a) int threadid
+b) pointer to array of struct
+c) int diff, stating the difference between two nodes on which computation is done
+
+4) 
+I am building a inplace tree which is traversed twice bottom-up and top down.(http://homes.cs.washington.edu/~djg/teachingMaterials/spac)
+a) Span is O(logn) , work is O(n)
+b) I am creating n/2 threads where n is number of nodes at a particular level.
+c) If allowed threads < n/2 say x then I am waiting for x threads to return and then start executing for n/2-x threads of that level i.e a sequential step.
+d) After each level also I am waiting for all threads so that complete evaluation of that level is done.
+
+5) 
+Due to tree structure load is equally balanced among all active threads. A level with n nodes has only n/2 active threads. If allowed threads are lesser than also all active threads have equal load due to data parallelism.
